@@ -24,6 +24,9 @@ export default class TodoList extends React.Component {
               <TodoItem text={item.get('text')}
                         key={item.get('text')}
                         isCompleted={this.isCompleted(item)}
+                        toggleComplete={this.props.toggleComplete}
+                        deleteItem={this.props.deleteItem}
+                        editItem={this.props.editItem}
                         isEditing={item.get('editing')} />
             )}
           </ul>
